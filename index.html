@@ -10,6 +10,11 @@
     <meta name="author" content="">
 
     <title>Budżet Partycypacyjny</title>
+	<style>
+		video{
+			width:80%;
+		}
+	</style>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -84,14 +89,70 @@
 
     <!-- Header -->
     <header>
-        <div class="container">
-            <div class="intro-text">
-                <div class="intro-lead-in">Gdybyś mógł zmienić swoje Miasto</div>
-                <div class="intro-heading">Od czego byś zaczął?</div>
-                <a href="#services" class="page-scroll btn btn-xl">Chcę wiedzieć więcej.</a>
-            </div>
-        </div>
+		<div id = "myCarousel" class ="carousel slide">
+			<ol class = "carousel-indicators">
+				<li data-target = "#myCarousel" data-slide-to = "0" class = "active"</li>
+				<li data-target = "#myCarousel" data-slide-to = "1"</li>
+				<li data-target = "#myCarousel" data-slide-to = "2"</li>
+			</ol>
+			<div class="carousel-inner">
+				<div class="item active">
+					<img src="img/city-wallpaper/city-wallpaper-29.jpg" alt="Beach" class = "img-responsive">
+					<div class= "carousel-caption">
+						<h1>Gdybyś mógł zmienić swoje Miasto</h1>
+						<h4>Od czego byś zaczął?</h4>
+						<!--<a data-target = "#myCarousel" data-slide-to = "1" class="page-scroll btn btn-xl">Chcę wiedzieć więcej.</a>-->
+					</div>
+				</div>
+				<div class="item" >
+					<img src="img/city-wallpaper/city-wallpaper-32.jpg" alt="Beach" class = "img-responsive">	
+				</div>
+				<div class="item">
+					<img src="img/city-wallpaper/city-wallpaper-14.jpg" alt="Beach" class = "img-responsive">	
+				</div>
+				<a class="carousel-control left" href="#myCarousel" data-slide="prev">
+					<span class="icon-prev"></span>
+				</a>
+				<a class="carousel-control right" href="#myCarousel" data-slide="next">
+					<span class="icon-next"></span>
+				</a>
+			</div>
+		</div>
     </header>
+	
+	    <section id="movies">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Obejrzyj Wideo</h2>
+                    
+                </div>
+            </div>
+            <div class="margin-top-20 row text-center">
+				<div  class="col-md-6 ">
+					<button class="btn btn-xl" type="button"  data-toggle="modal" data-target="#mv1">Wideo 1</button>
+				</div>
+				<div  class="col-md-6 ">
+					<button class="btn btn-xl" type="button"  data-toggle="modal" data-target="#mv1">Wideo 2</button>
+				</div>
+			</div>
+		</div>
+		</section>
+	<div id="mv1" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+	  <div class="modal-dialog modal-lg">
+		<div class="modal-content">
+		<div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			<h4 class="modal-title">Czym jest budżet partycypacyjny?</h4>
+		</div>
+		<div class="modal-body">
+		  <video>
+			<source src="http://budzet-partycypacyjny.pl/video/budzet_video%201_01.21%20v2.mp4"  type="video/mp4"></source>
+		  </video>
+		</div>
+		</div>
+	  </div>
+	</div>
 
     <!-- Services Section -->
     <section id="services">
@@ -150,11 +211,13 @@
             </div>
 			    <div class="row text-center">
 					<div class="col-md-6">
+						<a href="http://forum.kodujdlapolski.pl/t/funkcjonalnosci-aplikacji-wspierajacej-budzet-partycypacyjny/2389" class="portfolio-link" data-toggle="modal">
 						<span class="fa-stack fa-4x">
 							<i class="fa fa-square fa-stack-2x text-primary"></i>
 							<i class="fa fa-comments fa-stack-1x fa-inverse"></i>
 						</span>
 						<h4 class="service-heading">Dyskusja Pomysłów.</h4>
+						</a>
 						<p class="text-muted">Budżet Partycypacyjny stał się bardzo popularny ostatnimi laty w Polsce. Jednak dyskusja na jego temat jest rozproszona. Tworzymy forum na, którym niezależnie od lokalizacji oraz motywów możemy współtworzyć Budżet Partycypacyjny w Polsce. Wiedza i doświadczenie zgromadzone w różnych instytucjach może przyczynić się do upowszechnienia i poprawienia procesu w całej Polsce.</p>
 					</div>
 					<div class="col-md-6">
@@ -180,6 +243,29 @@
 						<p class="text-muted">Dane zdobyte podczas przeprowadzonych procesów są nieocenionym źródłem informacji, która może zostac wykorzystana do uczenia się jak poprawić proces w przyszlych latach oraz jakimi potrzebami kierują się mieszkańcy miast. Dzięki tym informacjom mozna także podejmować bardziej świadome decyzje jak wydatkować publiczne pieniądze. Staramy się stale uzupełniać informacje na temat przeprowadzonych procesow.</p>
 					</div>
 					</a>
+					<a href="http://mapa.budzet-partycypacyjny.pl" class="portfolio-link" data-toggle="modal">
+					<div class="col-md-6">
+						<span class="fa-stack fa-4x">
+							<i class="fa fa-square fa-stack-2x text-primary"></i>
+							<i class="fa fa-map-marker fa-stack-1x fa-inverse"></i>
+						</span>
+						<h4 class="service-heading">Mapa Projektów</h4>
+						<p class="text-muted">Jeżeli jesteś zainteresowany projektami w swojej okolicy możesz obejrzeć je na mapie. Dostępne są zarówno historyczne jak i aktualne projekty. Możesz dodać także swój pomysł i w ten sposób go wypromować. Zamieszczając projekt możesz dodać linki do swojej strony www, strony na facebook lub kanału youtube.</p>
+					</div>
+					</a>
+				</div>
+				
+				<div class="row text-center" >
+					<a href="#polls" class="portfolio-link" data-toggle="modal">
+					<div class="col-md-6">
+						<span class="fa-stack fa-4x">
+							<i class="fa fa-square fa-stack-2x text-primary"></i>
+							<i class="fa fa-file-text fa-stack-1x fa-inverse"></i>
+						</span>
+						<h4 class="service-heading">Ankiety</h4>
+						<p class="text-muted">Kluczowym elementem rozwoju budżetu partycypacyjnego jest Ewaluacja procesu. Jeżeli w twoim mieście został już przeprowadzony budżet partycypacyjny możesz podzielić się swoimi spostrzerzeniami wypełniając jedną z przygotowanych przez nas ankiet. Każeda z ankiet odpowiada innemu etapowi procesu. </p>
+					</div>
+					</a>
 					<a href="#function_adinistration" class="portfolio-link" data-toggle="modal">
 					<div class="col-md-6">
 						<span class="fa-stack fa-4x">
@@ -191,9 +277,11 @@
 					</div>
 					</a>
 				</div>
+			
 		</div>
     </section>
     <!-- Portfolio Grid Section -->
+	<!--
     <section id="portfolio">
         <div class="container">
             <div class="row">
@@ -263,6 +351,7 @@
             </div>
         </div>
     </section>
+	-->
 
  
 
@@ -324,7 +413,7 @@
         </div>
     </section>
 
-    <!-- Clients Aside -->
+    <!-- Clients Aside 
     <aside class="clients hidden">
         <div class="container">
             <div class="row">
@@ -351,7 +440,7 @@
             </div>
         </div>
     </aside>
-
+-->
     <section id="contact">
         <div class="container">
             <div class="row">
@@ -398,28 +487,28 @@
 
     <footer>
         <div class="container">
+			<div class="row">
+                    <span class="copyright">O ile nie jest to stwierdzone inaczej, wszystkie materiały na stronie są dostępne na licencji <a href="https://creativecommons.org/licenses/by/3.0/pl/">Creative Commons Uznanie Autorstwa 3.0 Polska</a></span>
+			</div>
             <div class="row">
-                <div class="col-md-4">
-                    <span class="copyright">Copyright &copy; Budżet Partycypacyjne 2014</span>
-                </div>
-                <div class="col-md-4">
+                <div class="span12 pagination-centered">
                     <ul class="list-inline social-buttons">
-                        <li><a href="#"><i class="fa fa-twitter"></i></a>
+                        <!--<li><a href="#"><i class="fa fa-twitter"></i></a>
+                        </li>-->
+                        <li><a href="https://www.facebook.com/budzetpl"><i class="fa fa-facebook"></i></a>
                         </li>
-                        <li><a href="#"><i class="fa fa-facebook"></i></a>
-                        </li>
-                        <li><a href="#"><i class="fa fa-linkedin"></i></a>
-                        </li>
+                        <!--<li><a href="#"><i class="fa fa-linkedin"></i></a>
+                        </li>-->
                     </ul>
                 </div>
-                <div class="col-md-4">
+                <!--<div class="col-md-4">
                     <ul class="list-inline quicklinks">
                         <li><a href="#">Privacy Policy</a>
                         </li>
                         <li><a href="#">Terms of Use</a>
                         </li>
                     </ul>
-                </div>
+                </div>-->
             </div>
         </div>
     </footer>
@@ -455,6 +544,86 @@
         </div>
     </div>
 
+	<!-- Polls modal-->
+	    <div class="portfolio-modal modal fade" id="polls" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Ankiety</h2>
+                            <p class="item-intro text-muted">Dzięki przygotowany przez nas ankietom będziesz mógł w prosty sposób podzielić się swoimi spostrzerzeniami na temat Budżetu Partycypacyjnego w twojej okolicy
+							<br>Wyniki ankiet posłużą do pracy nad poprawą Partycypacji w twoim otoczniu.</p>
+							
+							<div class="row text-center">
+								<a href="https://docs.google.com/forms/d/1M8forNZBfe_igbaEaEOtIBBvIitkOjMdPgYLVrp0y54/viewform" class="portfolio-link" data-toggle="modal">
+								<div class="col-md-6">
+									<span class="fa-stack fa-4x">
+										<i class="fa fa-square fa-stack-2x text-primary"></i>
+										<i class="fa fa-file-text fa-stack-1x fa-inverse"></i>
+									</span>
+									<h4 class="service-heading">Etap 1 - Przygotowanie procesu</h4>
+									<p class="text-muted"></p>
+								</div>
+								</a>
+								<a href="https://docs.google.com/forms/d/1oBf5JsgoAVYYSRQXSuGdfyuPwCIB0e2CYghrSFjURec/viewform" class="portfolio-link" data-toggle="modal">
+								<div class="col-md-6">
+									<span class="fa-stack fa-4x">
+										<i class="fa fa-square fa-stack-2x text-primary"></i>
+										<i class="fa fa-file-text fa-stack-1x fa-inverse"></i>
+									</span>
+									<h4 class="service-heading">Etap 2 – Opracowywanie i zgłaszanie propozycji projektów</h4>
+									<p class="text-muted"></p>
+								</div>
+								</a>
+							</div>
+							<div class="row text-center">
+								<a href="https://docs.google.com/forms/d/1mPxozOews7W0uk-KDWUVLW6lSPzyRkaZaUvSkbxXsCA/viewform" class="portfolio-link" data-toggle="modal">
+								<div class="col-md-6">
+									<span class="fa-stack fa-4x">
+										<i class="fa fa-square fa-stack-2x text-primary"></i>
+										<i class="fa fa-file-text fa-stack-1x fa-inverse"></i>
+									</span>
+									<h4 class="service-heading">Etap 3 – Weryfikacja i dyskusja nad projektami</h4>
+									<p class="text-muted"></p>
+								</div>
+								</a>
+								<a href="https://docs.google.com/forms/d/1-JdjHadn_JJ6gh0xJ05k_0EvHtmjTYHwNlmSs81ifUI/viewform" class="portfolio-link" data-toggle="modal">
+								<div class="col-md-6">
+									<span class="fa-stack fa-4x">
+										<i class="fa fa-square fa-stack-2x text-primary"></i>
+										<i class="fa fa-file-text fa-stack-1x fa-inverse"></i>
+									</span>
+									<h4 class="service-heading">Etap 4 – Wybór projektów do realizacji (głosowanie)</h4>
+									<p class="text-muted"></p>
+								</div>
+								</a>
+							</div>
+							<div class="row text-center">
+								<a href="https://docs.google.com/forms/d/1dk8DzzxEJ49iZWDlGov_5ZkBTOf4RIrkyNUmEMHj08I/viewform" class="portfolio-link" data-toggle="modal">
+								<div class="col-md-6">
+									<span class="fa-stack fa-4x">
+										<i class="fa fa-square fa-stack-2x text-primary"></i>
+										<i class="fa fa-file-text fa-stack-1x fa-inverse"></i>
+									</span>
+									<h4 class="service-heading">Etap 5 – Monitorowanie realizacji projektów i ewaluacja budżetu partycypacyjnego.</h4>
+									<p class="text-muted"></p>
+								</div>
+								
+							</div>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i>Zamknij Informację.</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- Portfolio Modal 2 -->
     <div class="portfolio-modal modal fade" id="organizations" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-content">
